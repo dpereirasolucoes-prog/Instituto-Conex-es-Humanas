@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-teal: var(--teal);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-deep: var(--deep);
+  --color-deep-foreground: var(--deep-foreground);
+  --font-serif: "Source Serif 4", Georgia, Cambria, serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(98.5% 0.005 230);
+  --foreground: oklch(27% 0.06 255);
+  --card: oklch(100% 0 0);
+  --card-foreground: oklch(27% 0.06 255);
+  --popover: oklch(100% 0 0);
+  --popover-foreground: oklch(27% 0.06 255);
+  --primary: oklch(38% 0.12 258);
+  --primary-foreground: oklch(98% 0.01 230);
+  --secondary: oklch(95% 0.025 220);
+  --secondary-foreground: oklch(32% 0.1 255);
+  --muted: oklch(95.5% 0.012 230);
+  --muted-foreground: oklch(50% 0.04 250);
+  --accent: oklch(68% 0.12 215);
+  --accent-foreground: oklch(20% 0.05 250);
+  --teal: oklch(62% 0.1 190);
+  --border: oklch(91% 0.015 230);
+  --ring: oklch(60% 0.12 230);
+  --deep: oklch(24% 0.07 258);
+  --deep-foreground: oklch(96% 0.02 220);
+  --gradient-brand: linear-gradient(135deg, var(--primary), oklch(55% 0.14 240) 55%, var(--accent));
+  --gradient-soft: radial-gradient(60% 60% at 80% 20%, oklch(90% 0.06 215 / 0.6), transparent 70%), radial-gradient(50% 50% at 10% 80%, oklch(92% 0.05 190 / 0.5), transparent 70%);
+  --shadow-soft: 0 20px 50px -20px oklch(38% 0.12 258 / 0.25);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-serif {
+  font-family: "Source Serif 4", Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.bg-brand {
+  background-image: var(--gradient-brand);
+}
+
+.text-brand {
+  background-image: var(--gradient-brand);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.bg-soft {
+  background-image: var(--gradient-soft);
+}
+
+.bg-deep {
+  background-color: var(--deep);
+}
+
+.text-deep {
+  color: var(--deep);
+}
+
+.text-deep-foreground {
+  color: var(--deep-foreground);
+}
+
+.bg-deep-foreground\/5 {
+  background-color: color-mix(in srgb, var(--deep-foreground) 5%, transparent);
+}
+
+.bg-deep-foreground\/10 {
+  background-color: color-mix(in srgb, var(--deep-foreground) 10%, transparent);
+}
+
+.border-deep-foreground\/10 {
+  border-color: color-mix(in srgb, var(--deep-foreground) 10%, transparent);
+}
+
+.text-teal {
+  color: var(--teal);
+}
+
+.bg-teal {
+  background-color: var(--teal);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
